@@ -17,19 +17,10 @@ pscoast(cmd, file=getOption("gmt.file"))
   a full directory path. Without a path, the current working directory
   is used (see \code{getwd} and \code{setwd}).
 
-  File type should be \file{.eps} when \code{PAPER_MEDIA} is \code{A4+}
-  or \code{letter+}, but \file{.ps} otherwise.
-
   See the GMT documentation for details on \command{pscoast} and other
   GMT commands.
 }
-\value{
-  Null, but a map is drawn and saved in postscript format.
-
-  A file named \file{.gmtcommands4} is created in the current map
-  directory, \code{dirname(file)}. It can be removed later using
-  \code{psclose()}.
-}
+\value{\code{NULL}, but a map is drawn and saved in postscript format.}
 \seealso{
   Similar to \code{\link{plot}} and \code{\link{postscript}} in native
   \R graphics.
@@ -42,11 +33,11 @@ pscoast(cmd, file=getOption("gmt.file"))
 }
 \examples{
 \dontrun{
-# Draw map and save as "map.eps" in current working directory
+# Draw map and save as "map.ps" in current working directory
 gmt(demo.par)
 pscoast(demo.coast)
 psxy(demo.xy)
-pstext(demo.text)
+pstext(demo.text, "-J -R -F+f+a+j -O -K")
 psbar(demo.bar, ref=66)
 psclose()
 # See directory gmt/example for details

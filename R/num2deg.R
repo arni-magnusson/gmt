@@ -21,8 +21,8 @@ num2deg <- function(x, lat=NA, dec=FALSE, digits=0, zero=FALSE)
       m <- 0
       d <- d + 1
     }
-    m <- if(m < 10) paste("0", m, sep="") else m
-    s <- if(s < 10) paste("0", s, sep="") else s
+    m <- if(m < 10) paste0("0", m) else m
+    s <- if(s < 10) paste0("0", s) else s
     if(dec)
       dms <- round(x, digits)
     else
@@ -35,13 +35,13 @@ num2deg <- function(x, lat=NA, dec=FALSE, digits=0, zero=FALSE)
     if(is.na(lat))  # hemisphere not available, prepend minus if negative value
     {
       minus <- if(sign < 0) "-" else ""
-      deg <- paste(minus, dms, sep="")
+      deg <- paste0(minus, dms)
     }
     else  # hemisphere known, append N|S|E|W
     {
       hemi <- if(lat && sign>=0) "N"
               else if(lat && sign<0) "S" else if(!lat && sign>=0) "E" else "W"
-      deg <- paste(dms, hemi, sep="")
+      deg <- paste0(dms, hemi)
     }
 
     return(deg)

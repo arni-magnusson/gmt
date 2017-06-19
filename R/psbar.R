@@ -49,8 +49,8 @@ psbar <- function(x, cmd="-J -R -W1p -G180 -O -K", file=getOption("gmt.file"),
   file.create(tmp)  # overwrite previous tmp
   apply(bar.frame, 1, write.each.bar, tmp=tmp)
   ## Ensure lines are straight and multiple-file is expected
-  safe.cmd <- paste(cmd, "-A -m")
-  gmt.system(paste("psxy",tmp,safe.cmd), file=file, append=TRUE)
+  safe.cmd <- paste(cmd, "-A")
+  gmt.system(paste("gmt psxy",tmp,safe.cmd), file=file, append=TRUE)
 
   invisible(NULL)
 }

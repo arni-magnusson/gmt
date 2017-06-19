@@ -6,7 +6,7 @@
   postscript file.
 }
 \usage{
-gmt(par=NULL, file="map.eps", style="s", quiet=TRUE)
+gmt(par=NULL, file="map.ps", style="s", quiet=TRUE)
 }
 \arguments{
   \item{par}{optional string of GMT parameters,
@@ -16,16 +16,13 @@ gmt(par=NULL, file="map.eps", style="s", quiet=TRUE)
     GMT plot functions, passed to \code{options()}}
   \item{style}{default units and values: \code{"s"} for SI
     (international) or \code{"u"} for United States, passed to
-    \command{gmtdefaults}.}
+    \command{gmtset}.}
   \item{quiet}{whether current settings should be displayed.}
 }
 \details{
   The \code{file} argument can be supplied with (recommended) or without
   a full directory path. Without a path, the R working directory is used
   (see \code{getwd} and \code{setwd}).
-
-  File type should be \file{.eps} when \code{PAPER_MEDIA} is \code{A4+}
-  or \code{letter+}, but \file{.ps} otherwise.
 
   See the GMT documentation for details on graphical parameters,
   \command{gmtdefaults}, \command{gmtset} and other GMT commands.
@@ -36,9 +33,9 @@ gmt(par=NULL, file="map.eps", style="s", quiet=TRUE)
   If \code{par} is \code{NULL}, no GMT parameters are changed, but the
   current parameter values and postscript filename can be reviewed.
 
-  If \code{par} is a string (empty \code{""} will do), a file named
-  \file{.gmtdefaults4} is created in the current map directory,
-  \code{dirname(file)}. It can be removed later using \code{psclose()}.
+  If \code{par} is a string (empty \code{""} will do), a GMT
+  configuration file is created in the current map directory,
+  \code{dirname(file)}.
 }
 \seealso{
   \code{\link{options}} could be used to set \code{gmt.file} directly.
@@ -51,11 +48,11 @@ gmt(par=NULL, file="map.eps", style="s", quiet=TRUE)
 }
 \examples{
 \dontrun{
-# Draw map and save as "map.eps" in R working directory
+# Draw map and save as "map.ps" in R working directory
 gmt(demo.par)
 pscoast(demo.coast)
 psxy(demo.xy)
-pstext(demo.text)
+pstext(demo.text, "-J -R -F+f+a+j -O -K")
 psbar(demo.bar, ref=66)
 psclose()
 # See directory gmt/example for details

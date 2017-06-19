@@ -28,9 +28,7 @@ gmt.system(cmd, file=NULL, append=FALSE)
 }
 \examples{
 \dontrun{
-gmt.system("gmtdefaults -Ds", file=".gmtdefaults4")
-
 # Assuming bermuda.nc is in R working directory
-gmt.system("grdcontour bermuda.nc -JM7i -C250 -A1000 -B2", file="b.eps")
+gmt.system("grdcontour bermuda.nc -JM7i -C250 -A1000 -B2", file="b.ps")
 }
 }

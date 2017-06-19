@@ -52,11 +52,11 @@ demo.bar
 \seealso{\code{\link{gmt-package}} gives an overview of the package.}
 \examples{
 \dontrun{
-# Draw map and save as "map.eps" in R working directory
+# Draw map and save as "map.ps" in R working directory
 gmt(demo.par)
 pscoast(demo.coast)
 psxy(demo.xy)
-pstext(demo.text)
+pstext(demo.text, "-J -R -F+f+a+j -O -K")
 psbar(demo.bar, ref=66)
 psclose()
 # See directory gmt/example for details

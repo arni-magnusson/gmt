@@ -6,7 +6,7 @@ pstext <- function(x, cmd="-J -R -O -K", file=getOption("gmt.file"))
 
   tmp <- paste(dirname(tempdir()), "text.gmt", sep="/")
   r2gmt(x, tmp)
-  gmt.system(paste("pstext",tmp,cmd), file=file, append=TRUE)
+  gmt.system(paste("gmt pstext",tmp,cmd), file=file, append=TRUE)
 
   invisible(NULL)
 }

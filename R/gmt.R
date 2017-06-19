@@ -1,18 +1,15 @@
-gmt <- function(par=NULL, file="map.eps", style="s", quiet=TRUE)
+gmt <- function(par=NULL, file="map.ps", style="s", quiet=TRUE)
 {
   owd <- setwd(dirname(file)); on.exit(setwd(owd))
 
   if(is.character(par))
-  {
-    gmt.system(paste("gmtdefaults -D",style,sep=""), file=".gmtdefaults4")
-    gmt.system(paste("gmtset", par))
-  }
+    gmt.system(paste0("gmt set -D", style, " ", par))
 
   options(gmt.file=file)
 
   if(!quiet)
   {
-    gmtdefaults <- gmt.system("gmtdefaults -L")
+    gmtdefaults <- gmt.system("gmt defaults -L")
     cat(paste(gmtdefaults,collapse="\n"), "\n\n")
     print(options("gmt.file"))
   }

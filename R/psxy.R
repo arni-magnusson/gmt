@@ -6,7 +6,7 @@ psxy <- function(x, cmd="-J -R -Scp -W2p -O -K", file=getOption("gmt.file"))
 
   tmp <- paste(dirname(tempdir()), "xy.gmt", sep="/")
   r2gmt(x, tmp)
-  gmt.system(paste("psxy",tmp,cmd), file=file, append=TRUE)
+  gmt.system(paste("gmt psxy",tmp,cmd), file=file, append=TRUE)
 
   invisible(NULL)
 }

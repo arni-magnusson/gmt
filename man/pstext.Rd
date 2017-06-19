@@ -14,8 +14,14 @@ pstext(x, cmd="-J -R -O -K", file=getOption("gmt.file"))
   \item{file}{filename where the map is saved.}
 }
 \details{
-  The data are arranged in seven columns: Lon, Lat, Size, Angle, Font,
-  Justify, and Text, in that order.
+
+  The \code{cmd} argument can be used to specify the data columns:
+  \tabular{lll}{
+    Format (\code{cmd}) \tab Data columns \tab Notes\cr
+    \verb{-J -R -O -K} \tab \verb{Lon Lat Text} \tab (default)\cr
+    \verb{-J -R -F+f+a+j -O -K} \tab
+    \verb{Lon Lat Font Angle Justify Text} \tab (see example)
+  }
 
   If \code{x} is a filename, the data should be tabular with or without
   a header, separated by commas or whitespace. The first line is
@@ -26,7 +32,7 @@ pstext(x, cmd="-J -R -O -K", file=getOption("gmt.file"))
   GMT commands.
 }
 \value{
-  Null, but the map is annotated and saved in postscript format.
+  \code{NULL}, but the map is annotated and saved in postscript format.
 
   The temporary GMT input file \file{text.gmt} is saved in directory
   \code{dirname(tempdir())}, for the user to view or edit. It is later
@@ -44,11 +50,11 @@ pstext(x, cmd="-J -R -O -K", file=getOption("gmt.file"))
 }
 \examples{
 \dontrun{
-# Draw map and save as "map.eps" in current working directory
+# Draw map and save as "map.ps" in current working directory
 gmt(demo.par)
 pscoast(demo.coast)
 psxy(demo.xy)
-pstext(demo.text)
+pstext(demo.text, "-J -R -F+f+a+j -O -K")
 psbar(demo.bar, ref=66)
 psclose()
 # See directory gmt/example for details
