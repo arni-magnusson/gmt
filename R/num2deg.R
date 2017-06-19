@@ -1,10 +1,11 @@
 num2deg <- function(x, lat=NA, dec=FALSE, digits=0, zero=FALSE)
 {
   if (length(x) > 1)
-    mapply(num2deg, x, lat=lat, dec=dec, digits=digits, zero=zero)  # recursion supports element-specific format
+    ## Recursion supports element-specific format
+    mapply(num2deg, x, lat=lat, dec=dec, digits=digits, zero=zero)
   else
   {
-    ## 1 Determine degrees, minutes, and seconds
+    ## 1  Determine degrees, minutes, and seconds
     sign <- sign(x)
     x <- abs(x)  # work with absolute x, remember sign
     d <- trunc(x)
@@ -27,9 +28,10 @@ num2deg <- function(x, lat=NA, dec=FALSE, digits=0, zero=FALSE)
     else
       dms <- paste(d, m, s, sep=":")
 
-    ## 2 Format details
+    ## 2  Format details
     if(!zero)
-      dms <- gsub(":00$", "", gsub(":00$","",dms))  # remove trailing :00, first sec, then min
+      ## Remove trailing :00, first sec, then min
+      dms <- gsub(":00$", "", gsub(":00$","",dms))
     if(is.na(lat))  # hemisphere not available, prepend minus if negative value
     {
       minus <- if(sign < 0) "-" else ""
@@ -37,7 +39,8 @@ num2deg <- function(x, lat=NA, dec=FALSE, digits=0, zero=FALSE)
     }
     else  # hemisphere known, append N|S|E|W
     {
-      hemi <- if(lat && sign>=0) "N" else if(lat && sign<0) "S" else if(!lat && sign>=0) "E" else "W"
+      hemi <- if(lat && sign>=0) "N"
+              else if(lat && sign<0) "S" else if(!lat && sign>=0) "E" else "W"
       deg <- paste(dms, hemi, sep="")
     }
 
