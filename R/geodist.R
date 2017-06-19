@@ -4,10 +4,10 @@ geodist <- function(Nfrom, Efrom, Nto, Eto, units="km")
 
   rad <- 180 / pi
 
-  N1 <- zapsmall(Nfrom / rad, 12)
-  E1 <- zapsmall(Efrom / rad, 12)
-  N2 <- zapsmall(Nto   / rad, 12)
-  E2 <- zapsmall(Eto   / rad, 12)
+  N1 <- zapsmall(Nfrom/rad, 12)
+  E1 <- zapsmall(Efrom/rad, 12)
+  N2 <- zapsmall(Nto/rad, 12)
+  E2 <- zapsmall(Eto/rad, 12)
 
   radians <- acos(sin(N1)*sin(N2)+cos(N1)*cos(N2)*cos(E1-E2))
 
