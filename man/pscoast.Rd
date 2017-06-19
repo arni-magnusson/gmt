@@ -55,9 +55,3 @@ psclose()
 pscoast("-JM12c -R7E/38E/29N/48N -G100 -B5", "x.ps")
 }
 }
-% Graphics
-\keyword{hplot}
-% Programming
-\keyword{interface}
-% MASS
-\keyword{spatial}

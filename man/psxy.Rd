@@ -60,9 +60,3 @@ psxy(data.frame(lon=quakes$lon, lat=quakes$lat, mag=10^quakes$mag/1e6),
      "-J -R -Scp -W0.5p,red -O", "quake.eps")
 }
 }
-% Graphics
-\keyword{aplot}
-% Programming
-\keyword{interface}
-% MASS
-\keyword{spatial}

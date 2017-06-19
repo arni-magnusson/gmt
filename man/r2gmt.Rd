@@ -44,6 +44,3 @@ r2gmt(LonLat1, "temp.gmt")
 r2gmt(LonLat2, "temp.gmt", append=TRUE)
 }
 }
-% Programming
-\keyword{file}
-\keyword{interface}

@@ -28,9 +28,3 @@ deg2num(x)
 # The opposite of num2deg() example
 deg2num(c("12:30:44.5W", "17.5S", "1:00:05", "200:45E"))
 }
-% Basics
-\keyword{character}
-% Mathematics
-\keyword{arith}
-% MASS
-\keyword{spatial}

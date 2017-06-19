@@ -62,4 +62,3 @@ psclose()
 # See directory gmt/example for details
 }
 }
-\keyword{datasets}

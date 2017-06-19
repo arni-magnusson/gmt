@@ -82,9 +82,3 @@ psclose()
 # See directory gmt/example for details
 }
 }
-% Graphics
-\keyword{aplot}
-% Programming
-\keyword{interface}
-% MASS
-\keyword{spatial}

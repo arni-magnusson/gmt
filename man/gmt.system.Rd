@@ -34,6 +34,3 @@ gmt.system("gmtdefaults -Ds", file=".gmtdefaults4")
 gmt.system("grdcontour bermuda.nc -JM7i -C250 -A1000 -B2", file="b.eps")
 }
 }
-% Programming
-\keyword{interface}
-\keyword{file}

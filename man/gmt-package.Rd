@@ -59,11 +59,3 @@
   Other packages that can be used to draw maps include: \pkg{GRASS},
   \pkg{maps}, \pkg{PBSmapping}, and \pkg{spgrass6}.
 }
-% Graphics
-\keyword{hplot}
-% Basics
-\keyword{package}
-% Programming
-\keyword{interface}
-% MASS
-\keyword{spatial}

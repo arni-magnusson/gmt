@@ -61,6 +61,3 @@ psclose()
 # See directory gmt/example for details
 }
 }
-% Programming
-\keyword{environment}
-\keyword{interface}

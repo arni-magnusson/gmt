@@ -44,7 +44,3 @@ geodist(Nfrom, Efrom, Nto, Eto, units="km")
 geodist(55.75,37.63, 39.9,116.4)  # Moscow - Beijing
 geodist(90,0, -90,0, "nm")        # from pole to pole
 }
-% Mathematics
-\keyword{math}
-% MASS
-\keyword{spatial}

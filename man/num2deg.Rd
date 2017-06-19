@@ -40,9 +40,3 @@ num2deg(c(-12.51236, -17.5, 1.00139, 200.75),
         dec=c(FALSE, TRUE,  FALSE,   FALSE),
         digits=c(1,  1,     0,       0))
 }
-% Basics
-\keyword{character}
-% Mathematics
-\keyword{arith}
-% MASS
-\keyword{spatial}
