@@ -1,0 +1,2 @@
+`demo.par` <-
+"DEGREE_SYMBOL degree PAGE_ORIENTATION PAPER_MEDIA a4+ portrait PLOT_DEGREE_FORMAT F"
