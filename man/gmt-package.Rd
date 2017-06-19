@@ -41,9 +41,6 @@
   with helping functions that can be used to add more advanced features
   to a map.
 
-  It supports GMT version 4.0 and higher, and has been tested in Windows
-  and Linux.
-
   GMT users typically write shell scripts to draw maps. The \pkg{gmt}
   package is about interactive data analysis, rapidly visualizing
   subsets and summaries of geographic data, while performing statistical
@@ -52,10 +49,6 @@
 \author{Arni Magnusson.}
 \references{
   Wessel, P. and W.H.F. Smith. \cite{The Generic Mapping Tools:
-    Technical reference and cookbook.} Available at
-  \url{http://gmt.soest.hawaii.edu/gmt/doc/gmt/pdf/GMT_Docs.pdf}.
-}
-\seealso{
-  Other packages that can be used to draw maps include: \pkg{GRASS},
-  \pkg{maps}, \pkg{PBSmapping}, and \pkg{spgrass6}.
+    GMT documentation.} Available at
+  \url{http://gmt.soest.hawaii.edu/projects/gmt/wiki/Documentation}.
 }
