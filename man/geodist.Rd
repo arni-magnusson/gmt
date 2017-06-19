@@ -48,4 +48,3 @@ geodist(90,0, -90,0, "nm")        # from pole to pole
 \keyword{math}
 % MASS
 \keyword{spatial}
-\encoding{latin1}
