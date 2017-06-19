@@ -9,7 +9,7 @@ psbar <- function(x, cmd="-J -R -W1p -G180 -O -K", file=getOption("gmt.file"), r
     bar.corners <- rbind(c(left,bottom), c(left,top), c(right,top), c(right,bottom), c(left,bottom))
     r2gmt(bar.corners, tmp, append=TRUE)
   }
-  if(is.null(file)) stop("Please pass a valid 'file' argument, or run gmt(file=\"myfile\").")
+  if(is.null(file)) stop("please pass a valid 'file' argument, or run gmt(file=\"myfile\")")
   owd <- setwd(dirname(file)); on.exit(setwd(owd))
 
   ## 1 Parse user data
