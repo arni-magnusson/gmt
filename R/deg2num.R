@@ -38,6 +38,6 @@ deg2num <- function(x)
       stop("unable to interpret coordinates;\n",
            "see 'GMT File Formats' in GMT manual")
 
-    return(value)
+    value
   }
 }

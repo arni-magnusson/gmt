@@ -44,6 +44,6 @@ num2deg <- function(x, lat=NA, dec=FALSE, digits=0, zero=FALSE)
       deg <- paste0(dms, hemi)
     }
 
-    return(deg)
+    deg
   }
 }

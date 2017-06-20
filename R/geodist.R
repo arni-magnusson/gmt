@@ -13,5 +13,5 @@ geodist <- function(Nfrom, Efrom, Nto, Eto, units="km")
 
   distance <- if(units=="km") 60*rad*radians*1.852 else 60*rad*radians
 
-  return(distance)
+  distance
 }
