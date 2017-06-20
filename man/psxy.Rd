@@ -10,7 +10,8 @@ psxy(x, cmd="-J -R -Scp -W2p -O -K", file=getOption("gmt.file"))
 \arguments{
   \item{x}{data frame, matrix, or filename containing the data to be
     plotted.}
-  \item{cmd}{string of arguments passed to \command{psxy}.}
+  \item{cmd}{string of arguments passed to GMT shell command
+    \command{psxy}.}
   \item{file}{filename where the map is saved.}
 }
 \details{

@@ -10,13 +10,13 @@ gmt(par=NULL, file="map.ps", style="s", quiet=TRUE)
 }
 \arguments{
   \item{par}{optional string of GMT parameters,
-    \code{"PARAMETER1=value1 PARAMETER2=value2 ..."}, passed to
-    \command{gmtset}.}
-  \item{file}{postscript filename used in subsequent calls to
-    GMT plot functions, passed to \code{options()}}
+    \code{"PARAMETER1=value1 PARAMETER2=value2 ..."}, passed to GMT
+    shell command \command{gmtset}.}
+  \item{file}{postscript filename used in subsequent calls to GMT plot
+    functions, passed to \code{options()}}
   \item{style}{default units and values: \code{"s"} for SI
-    (international) or \code{"u"} for United States, passed to
-    \command{gmtset}.}
+    (international) or \code{"u"} for United States, passed to GMT shell
+    command \command{gmtset}.}
   \item{quiet}{whether current settings should be displayed.}
 }
 \details{

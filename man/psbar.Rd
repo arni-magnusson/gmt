@@ -11,7 +11,8 @@ psbar(x, cmd="-J -R -W1p -G180 -O -K", file=getOption("gmt.file"),
 \arguments{
   \item{x}{data frame, matrix, or filename containing the data to be
     plotted.}
-  \item{cmd}{string of arguments passed to \command{psxy}.}
+  \item{cmd}{string of arguments passed to GMT shell command
+    \command{psxy}.}
   \item{file}{filename where the map is saved.}
   \item{ref}{reference latitude where height 1 renders a bar 1 degree
     high.}

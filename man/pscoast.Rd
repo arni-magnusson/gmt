@@ -9,7 +9,8 @@
 pscoast(cmd, file=getOption("gmt.file"))
 }
 \arguments{
-  \item{cmd}{string of arguments passed to \command{pscoast}.}
+  \item{cmd}{string of arguments passed to GMT shell command
+    \command{pscoast}.}
   \item{file}{filename where the map will be saved.}
 }
 \details{

@@ -10,7 +10,8 @@ pstext(x, cmd="-J -R -O -K", file=getOption("gmt.file"))
 \arguments{
   \item{x}{data frame, matrix, or filename containing the data to be
     plotted.}
-  \item{cmd}{string of arguments passed to \command{pstext}.}
+  \item{cmd}{string of arguments passed to GMT shell command
+    \command{pstext}.}
   \item{file}{filename where the map is saved.}
 }
 \details{
