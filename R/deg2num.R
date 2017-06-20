@@ -9,12 +9,9 @@ deg2num <- function(x)
   {
     ## 1  Determine sign (positive or negative)
     first.char <- substring(x, first=1, last=1)
-    if(first.char == "-")
-      sign <- -1
-    else if(is.digit(first.char))
-      sign <- 1
-    else
-      stop("first character must be \"-\" or number")
+    sign <- if(first.char == "-") -1
+    else if(is.digit(first.char)) 1
+    else stop("first character must be \"-\" or number")
 
     ## 2  Look at last character: cut it off if W|E|S|N and change sign if W|S
     last.char <- substring(x, first=nchar(x), last=nchar(x))

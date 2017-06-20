@@ -1,7 +1,6 @@
 num2deg <- function(x, lat=NA, dec=FALSE, digits=0, zero=FALSE)
 {
-  if (length(x) > 1)
-    ## Recursion supports element-specific format
+  if (length(x) > 1)  # recursion supports element-specific format
     mapply(num2deg, x, lat=lat, dec=dec, digits=digits, zero=zero)
   else
   {

@@ -17,13 +17,12 @@ psbar <- function(x, cmd="-J -R -W1p -G180 -O -K", file=getOption("gmt.file"),
 
   ## 1  Parse user data
   tmp <- paste(dirname(tempdir()), "bar.gmt", sep="/")
-  ## We can't work blindly with data file, so read and parse
   x.matrix <- as.matrix(r2gmt(x,tmp))
   lon <- deg2num(x.matrix[,1])   # longitude at bar center
   lat <- deg2num(x.matrix[,2])   # latitude at bar base
-  w   <- x.matrix[,3]            # bar width in degrees
+  w   <- x.matrix[,3]    # bar width in degrees
   h   <- x.matrix[,4]    # bar height in user units (1 deg high at ref latitude)
-  n   <- nrow(x.matrix)          # number of bars
+  n   <- nrow(x.matrix)  # number of bars
 
   ## Y = log(tan(pi/4+LAT*pi/360))
   ## LAT = (atan(exp(Y))-pi/4) / (pi/360)
@@ -39,16 +38,16 @@ psbar <- function(x, cmd="-J -R -W1p -G180 -O -K", file=getOption("gmt.file"),
   ## Derivative of Mercator Y at ref latitude
   dYref <- (pi/360) / (tan(pi/4+ref*pi/360)*cos(pi/4+ref*pi/360)^2)
   h.deg <- h * round(dYref/dYlat, digits)  # bar height in degrees
-  left      <- lon - w/2                   # left bar edge
-  right     <- lon + w/2                   # right bar edge
-  bottom    <- lat                         # bottom bar edge
-  top       <- lat + h.deg                 # top bar edge
+  left      <- lon - w/2    # left bar edge
+  right     <- lon + w/2    # right bar edge
+  bottom    <- lat          # bottom bar edge
+  top       <- lat + h.deg  # top bar edge
   bar.frame <- data.frame(left=left, right=right, bottom=bottom, top=top)
 
   ## 3  Write bar coordinates into multisegment file and add bars to map
   file.create(tmp)  # overwrite previous tmp
   apply(bar.frame, 1, write.each.bar, tmp=tmp)
-  ## Ensure lines are straight and multiple-file is expected
+  ## Ensure lines are straight
   safe.cmd <- paste(cmd, "-A")
   gmt.system(paste("gmt psxy",tmp,safe.cmd), file=file, append=TRUE)
 

@@ -10,7 +10,7 @@ r2gmt <- function(x, datafile, append=FALSE)
     ## ... is not comment, minus, point, or number
     header <- all(char!="#", char!="-", char!=".", !is.digit(char))
     ## Assume comma separator if first line has comma
-    sep <- if(length(grep(",",readLines(x,n=1)))>1) "," else ""
+    sep <- if(length(grep(",",readLines(x,n=1))) > 1) "," else ""
     x <- read.table(x, sep=sep, header=header)
   }
 
