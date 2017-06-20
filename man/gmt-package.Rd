@@ -48,7 +48,7 @@
 }
 \author{Arni Magnusson.}
 \references{
-  Wessel, P. and W.H.F. Smith. \cite{The Generic Mapping Tools:
-    GMT documentation.} Available at
+  Wessel, P., W.H.F. Smith, R. Scharroo, J. Luis, and F. Wobbe.
+  \cite{The Generic Mapping Tools: GMT documentation.} Available at
   \url{http://gmt.soest.hawaii.edu/projects/gmt/wiki/Documentation}.
 }
