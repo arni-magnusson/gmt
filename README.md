@@ -1,5 +1,5 @@
 [![CRAN Status](http://r-pkg.org/badges/version/gmt)](https://cran.r-project.org/package=gmt)
-[![CRAN Downloads](http://cranlogs.r-pkg.org/badges/grand-total/gmt)](https://cran.r-project.org/package=gmt)
+[![CRAN Downloads](http://cranlogs.r-pkg.org/badges/gmt)](https://cran.r-project.org/package=gmt)
 
 # gmt
 
