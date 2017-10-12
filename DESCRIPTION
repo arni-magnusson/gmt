@@ -1,10 +1,10 @@
 Package: gmt
-Version: 2.0-0
-Date: 2017-06-20
+Version: 2.0-1
+Date: 2017-09-12
 Title: Interface Between GMT Map-Making Software and R
 Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"),
   email="arni.magnusson@ices.dk"))
-Imports: stats, utils, coda, Hmisc, lattice
+Imports: utils
 SystemRequirements: gmt
 LazyData: yes
 Description: Interface between the GMT map-making software and R, enabling the
