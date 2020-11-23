@@ -1,6 +1,6 @@
-[![CRAN Status](http://r-pkg.org/badges/version/gmt)](https://cran.r-project.org/package=gmt)
-[![CRAN Monthly](http://cranlogs.r-pkg.org/badges/gmt)](https://cran.r-project.org/package=gmt)
-[![CRAN Total](http://cranlogs.r-pkg.org/badges/grand-total/gmt)](https://cran.r-project.org/package=gmt)
+[![CRAN Status](https://r-pkg.org/badges/version/gmt)](https://cran.r-project.org/package=gmt)
+[![CRAN Monthly](https://cranlogs.r-pkg.org/badges/gmt)](https://cran.r-project.org/package=gmt)
+[![CRAN Total](https://cranlogs.r-pkg.org/badges/grand-total/gmt)](https://cran.r-project.org/package=gmt)
 
 # gmt
 
