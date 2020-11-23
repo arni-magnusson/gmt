@@ -1,9 +1,8 @@
 Package: gmt
-Version: 2.0-1
-Date: 2017-09-12
+Version: 2.0.2
+Date: 2020-11-23
 Title: Interface Between GMT Map-Making Software and R
-Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"),
-  email="arni.magnusson@ices.dk"))
+Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"))
 Imports: utils
 SystemRequirements: gmt
 LazyData: yes
@@ -12,5 +11,5 @@ Description: Interface between the GMT map-making software and R, enabling the
   annotate maps in postscript format. The gmt package is about interactive data
   analysis, rapidly visualizing subsets and summaries of geographic data, while
   performing statistical analysis in the R console.
-License: GPL (>= 2)
-URL: http://gmt.soest.hawaii.edu
+License: GPL-3
+URL: https://www.generic-mapping-tools.org
