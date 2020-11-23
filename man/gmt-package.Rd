@@ -50,5 +50,5 @@
 \references{
   Wessel, P., Smith, W. H. F., Scharroo, R., Luis, J. and Wobbe, F.
   \cite{The Generic Mapping Tools: GMT documentation.} Available at
-  \url{https://gmt.soest.hawaii.edu/projects/gmt/wiki/Documentation}.
+  \url{https://docs.generic-mapping-tools.org}.
 }
