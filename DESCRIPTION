@@ -1,6 +1,6 @@
 Package: gmt
-Version: 2.0.2
-Date: 2020-11-23
+Version: 2.0.3
+Date: 2022-06-06
 Title: Interface Between GMT Map-Making Software and R
 Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"))
 Imports: utils

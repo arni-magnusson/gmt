@@ -1,9 +1,14 @@
 num2deg <- function(x, lat=NA, dec=FALSE, digits=0, zero=FALSE)
 {
-  if (length(x) > 1)  # recursion supports element-specific format
+  if (length(x) > 1)  # recursion allows element-specific format
+  {
     mapply(num2deg, x, lat=lat, dec=dec, digits=digits, zero=zero)
+  }
   else
   {
+    if(is.na(x))
+      return(NA_character_)
+
     ## 1  Determine degrees, minutes, and seconds
     sign <- sign(x)
     x <- abs(x)  # work with absolute x, remember sign

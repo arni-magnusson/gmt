@@ -3,13 +3,15 @@ deg2num <- function(x)
   is.number <- function(x)
     suppressWarnings(!is.na(as.numeric(x)))
 
-  ## Recursion allows each x[i] to have a different format
-  if(length(x) > 1)
+  if(length(x) > 1)  # recursion allows element-specific format
   {
     sapply(x, deg2num, USE.NAMES=FALSE)
   }
   else
   {
+    if(is.na(x))
+      return(NA_real_)
+
     ## 1  Determine sign (positive or negative)
     first.char <- substring(x, first=1, last=1)
     sign <- if(first.char == "-") -1
