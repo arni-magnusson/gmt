@@ -3,6 +3,8 @@ gmt 2.0.3 (2022-06-06)
 --------------------------------------------------------------------------------
 o Improved deg2num() and num2deg() so they handle NA values.
 
+o Added modern.sh script, demonstrating GMT modern mode.
+
 
 
 
