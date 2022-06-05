@@ -3,16 +3,17 @@ deg2num <- function(x)
   is.number <- function(x)
     suppressWarnings(!is.na(as.numeric(x)))
 
+  ## Recursion allows each x[i] to have a different format
   if(length(x) > 1)
   {
-    sapply(x, deg2num)  # recursion supports element-specific format
+    sapply(x, deg2num, USE.NAMES=FALSE)
   }
   else
   {
     ## 1  Determine sign (positive or negative)
     first.char <- substring(x, first=1, last=1)
     sign <- if(first.char == "-") -1
-    else if(grepl("[0-9]",first.char)) 1
+    else if(grepl("[0-9]", first.char)) 1
     else stop("first character must be '-' or number")
 
     ## 2  Look at last character: cut it off if W|E|S|N and change sign if W|S
