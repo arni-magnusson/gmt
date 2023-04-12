@@ -6,10 +6,11 @@ Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@
 Imports: utils
 SystemRequirements: gmt
 LazyData: yes
-Description: Interface between the GMT map-making software and R, enabling the
+Description: Interface between the 'GMT' map-making software and R, enabling the
   user to manipulate geographic data within R and call GMT commands to draw and
   annotate maps in postscript format. The gmt package is about interactive data
   analysis, rapidly visualizing subsets and summaries of geographic data, while
   performing statistical analysis in the R console.
 License: GPL-3
-URL: https://www.generic-mapping-tools.org
+URL: https://github.com/arni-magnusson/gmt,
+  https://www.generic-mapping-tools.org
